@@ -57,7 +57,7 @@ namespace seneca {
     void Numbers::sort() {
         int i, j;
         double temp;
-        for (i = m_numCount - 1; i > 0; i--) {
+        for (size_t i = m_numCount - 1; i > 0; i--) {
             for (j = 0; j < i; j++) {
                 if (m_numbers[j] > m_numbers[j + 1]) {
                     temp = m_numbers[j];
@@ -71,7 +71,7 @@ namespace seneca {
     double Numbers::average() const {
         double aver = 0.0;
         if (!isEmpty()) {
-            for (int i = 0; i < m_numCount; i++)
+            for (size_t i = 0; i < m_numCount; i++)
                 aver += m_numbers[i];
             aver = aver / m_numCount;
         }
@@ -81,7 +81,7 @@ namespace seneca {
         double minVal = 0.0;
         if (!isEmpty()) {
             minVal = m_numbers[0];
-            for (int i = 1; i < m_numCount; i++)
+            for (size_t i = 1; i < m_numCount; i++)
                 if (minVal > m_numbers[i]) minVal = m_numbers[i];
         }
         return minVal;
