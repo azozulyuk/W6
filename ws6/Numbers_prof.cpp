@@ -55,7 +55,7 @@ namespace seneca {
         strcpy(m_filename, filename);
     }
     void Numbers::sort() {
-        int i, j;
+       size_t j;
         double temp;
         for (size_t i = m_numCount - 1; i > 0; i--) {
             for (j = 0; j < i; j++) {
@@ -90,7 +90,7 @@ namespace seneca {
         double maxVal = 0.0;
         if (!isEmpty()) {
             maxVal = m_numbers[0];
-            for (int i = 1; i < m_numCount; i++)
+            for (size_t i = 1; i < m_numCount; i++)
                 if (maxVal < m_numbers[i]) maxVal = m_numbers[i];
         }
         return maxVal;
